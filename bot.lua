@@ -3,7 +3,7 @@ redis = (loadfile "lua-redis.lua")()
 database = Redis.connect('127.0.0.1', 6379)
 chats = {}
 day = 86400
-bot_id = 200089490 -- Your Bot USER_ID
+bot_id = 200089490
 sudo_users = {265228002}
   -----------------------------------------------------------------------------------------------
                                      -- start functions --
@@ -2471,8 +2471,6 @@ familit {lastname}
 
 /getpro [1-10]
 دریافت عکس پروفایل شما
-مثال
-/getpro 2
 
 /setlink
 تنظیم لینک برای گروه
@@ -2491,12 +2489,6 @@ familit {lastname}
 
 /del عدد
 پاک کردن پیام های اخیر گروه
-مثال
-/del 100
-برای پاک کردن 100 پیام آخر
-
-
-راهنما بزودی کامل میشود!!!*
 ]]
                 send(msg.chat_id_, msg.id_, 1, text, 1, 'md')
    end
