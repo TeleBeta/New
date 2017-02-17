@@ -26,26 +26,24 @@ update() {
 }
 function print_logo() {
 	echo -e "\033[38;5;605m"
-	echo -e " _____         _____ _____    _    __  __"
-	echo -e "|  ___|____  _|_   _| ____|  / \  |  \/  |"
-	echo -e "| |_ / _ \ \/ / | | |  _|   / _ \ | |\/| |"
-	echo -e "|  _| (_) >  <  | | | |___ / ___ \| |  | |"
-  echo -e "|_|  \___/_/\_\ |_| |_____/_/   \_\_|  |_|"
-	echo -e "\n\e[36m"
+	echo -e "            _____         _____ _____    _    __  __             "
+	echo -e "           |  ___|____  _|_   _| ____|  / \  |  \/  |            "
+	echo -e "           | |_ / _ \ \/ / | | |  _|   / _ \ | |\/| |            "
+	echo -e "           |  _| (_) >  <  | | | |___ / ___ \| |  | |            "
+  echo -e "           |_|  \___/_/\_\ |_| |_____/_/   \_\_|  |_|            \e[36m"
 }
-
 function logo_play() {
     declare -A txtlogo
     seconds="0.015"
-    txtlogo[1]=" _____    _        ____  _____ _____  _"
-    txtlogo[2]="|_   _|__| | ___  | __ )| ____|_   _|/ \"
-    txtlogo[3]="  | |/ _ \ |/ _ \ |  _ \|  _|   | | / _ \"
-    txtlogo[4]="  | |  __/ |  __/ | |_) | |___  | |/ ___ \"
-    txtlogo[5]="  |_|\___|_|\___| |____/|_____| |_/_/   \_\"
 
-
-
-
+txtlogo[1]="                    We are FoxTeams.                           "
+txtlogo[2]="                    We are Legion.                             "
+txtlogo[3]="                    We do not forgive.                         "
+txtlogo[4]="                    We do not forget.                          "
+txtlogo[5]="                    Expect us.                                 "
+txtlogo[6]="                    Follow Team In TeleGram Channel : @FoxTeam."
+   echo -e "\033[0;00m"
+   echo -e "\e[36m"
 
     printf "\033[38;5;650m\t"
     for i in ${!txtlogo[@]}; do
@@ -71,18 +69,16 @@ if [ ! -f ./telegram ]; then
  fi
 
 
-   print_logo
-   echo -e "\033[38;5;222m"
-echo -e "                    We are FoxTeams.                                                          "
-echo -e "                    We are Legion.                                                                 "
-echo -e "                    We do not forgive.                                                          "
-echo -e "                    We do not forget.                                                            "
-echo -e "                    Expect us.                                                                           "
-echo -e "                    Follow Team In TeleGram Channel : @ FoxTeam."
-   echo -e "\033[0;00m"
-   echo -e "\e[36m"
+ 
+   echo -e "\033[38;5;130m"
    logo_play
+   echo -e "   _____    _        ____  _____ _____  _      "
+   echo -e "  |_   _|__| | ___  | __ )| ____|_   _|/ \     "
+   echo -e "    | |/ _ \ |/ _ \ |  _ \|  _|   | | / _ \    "
+   echo -e "    | |  __/ |  __/ | |_) | |___  | |/ ___ \   "
+   echo -e "    |_|\___|_|\___| |____/|_____| |_/_/   \_\  "
    echo -e "\e[36m"
 
-   ./tg/tgcli -s ./bot/bot.lua $@
+   ./telegram -s ./bot.lua $@
 fi
+  print_logo
