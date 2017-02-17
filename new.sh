@@ -23,14 +23,14 @@ update() {
   git pull
   git submodule update --init --recursive
 }
-//function print_logo() {
-//	echo -e "\033[38;5;605m"
-//	echo -e "            _____         _____ _____    _    __  __             "
-//	echo -e "           |  ___|____  _|_   _| ____|  / \  |  \/  |            "
-//	echo -e "           | |_ / _ \ \/ / | | |  _|   / _ \ | |\/| |            "
-//	echo -e "           |  _| (_) >  <  | | | |___ / ___ \| |  | |            "
-//  echo -e "           |_|  \___/_/\_\ |_| |_____/_/   \_\_|  |_|            \e[36m"
-//}
+function print_logo() {
+	echo -e "\033[38;5;605m"
+	echo -e "            _____         _____ _____    _    __  __             "
+	echo -e "           |  ___|____  _|_   _| ____|  / \  |  \/  |            "
+	echo -e "           | |_ / _ \ \/ / | | |  _|   / _ \ | |\/| |            "
+	echo -e "           |  _| (_) >  <  | | | |___ / ___ \| |  | |            "
+  echo -e "           |_|  \___/_/\_\ |_| |_____/_/   \_\_|  |_|            \e[36m"
+}
 function logo_play() {
     declare -A txtlogo
     seconds="0.015"
